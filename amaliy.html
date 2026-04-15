@@ -26,6 +26,7 @@ body {
 .card {
     background-color: white;
     width: 300px;
+    height: 350px;
     border-radius: 12px;     
     overflow: hidden;        
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -79,22 +80,32 @@ body {
     visibility: hidden;
     transition: all 0.3s ease;
 }
-
+.badge {
+  position: absolute;
+  top: 15px;      
+  left: 15px;   
+  background-color: #3498db; 
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
 
     </style>
 
 </head>
 <body>
     <div class="card">
-        <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="">
-        </div>
-        
-        <div class="content">
-            <h3>Cool Product</h3>
-            <p>This is a simple product card example.</p>
-            <button class="btn">More Info</button>
-    </div>
+  <div class="badge">NEW</div> <img src="shahar.jpg" alt="City">
+  <div class="content">
+    <h3>Cool Product</h3>
+    <p>This is a simple product card example.</p>
+    <button>More Info</button>
+  </div>
+</div>
 
 </body>
 </html>

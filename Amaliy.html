@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+body {
+    background-color: #00f2ff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+.card {
+    position: relative; 
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden; 
+}
+
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #3498db;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10; 
+}
+
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-content p {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+
+.info-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #2980b9;
+}
+    </style>
+</head>
+<body>
+  
+
+    <div class="card">
+        <div class="badge">NEW</div>
+        
+        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="City View">
+        
+        <div class="card-content">
+            <h3>Cool Product</h3>
+            <p>This is a simple product card example.</p>
+            <button class="info-btn">More Info</button>
+        </div>
+    </div>
+
+</body>
+</html> 
+</body>
+</html>

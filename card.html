@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Popup animatsiya</title>
+    <style>
+      
+    <style>
+        /* CSS SHU YERDA BOSHLANADI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #050505;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* KARTA DIZAYNI */
+        .card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 140%;
+            background: linear-gradient(#00d2ff, #3a7bd5);
+            animation: rotate 4s linear infinite;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            background: #111;
+            border-radius: 16px;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 4em;
+            color: rgba(255, 255, 255, 0.1);
+        }
+
+        .content a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        /* POPUP LOGIKASI (:target yordamida) */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+            z-index: 1000;
+        }
+
+        /* Agar URL-da #popup bo'lsa */
+        .modal-overlay:target {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-box {
+            background: #222;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #00d2ff;
+            text-align: center;
+            color: #fff;
+            max-width: 400px;
+            transform: scale(0.5);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .modal-overlay:target .modal-box {
+            transform: scale(1);
+        }
+
+        .close-btn {
+            margin-top: 20px;
+            display: inline-block;
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #ff4757;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="content">
+            <h2>01</h2>
+            <h3>Premium</h3>
+            <p>JS ishlatmasdan qilingan popup.</p>
+            <a href="#popup">Batafsil</a>
+        </div>
+    </div>
+
+    <div id="popup" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Daxshatli Popup!</h3>
+            <p>Bu oyna faqat CSS orqali ishlamoqda. URL-ga e'tibor bering, oxirida #popup paydo bo'ldi.</p>
+            <a href="#" class="close-btn">Yopish</a>
+        </div>
+    </div>
+
+</body>
+</html>
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
